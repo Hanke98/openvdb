@@ -88,10 +88,10 @@ if(NANOVDB_USE_CUDA)
 
   enable_language(CUDA)
 
-  set(NANOVDB_CUDA_EXTENDED_LAMBDA "--expt-extended-lambda")
-  if(CUDA_VERSION_MAJOR GREATER_EQUAL 11)
-    set(NANOVDB_CUDA_EXTENDED_LAMBDA "--extended-lambda")
-  endif()
+  # set(NANOVDB_CUDA_EXTENDED_LAMBDA "--expt-extended-lambda")
+  # if(CUDA_VERSION_MAJOR GREATER_EQUAL 11)
+  #   set(NANOVDB_CUDA_EXTENDED_LAMBDA "--extended-lambda")
+  # endif()
 
   set(CMAKE_CUDA_FLAGS "${NANOVDB_CUDA_EXTENDED_LAMBDA} -use_fast_math -lineinfo ${CMAKE_CUDA_FLAGS}")
 
